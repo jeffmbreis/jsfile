@@ -5577,7 +5577,7 @@ var JotformFeedback = $jot.createClass({
         $jot('head').append(responsiveLightboxStyle);
 
 
-        //jeff
+        //jeff2
         var cssLoading = '<style type="text/css">.lds-ellipsis{display:inline-block;width:64px;height:64px;position:absolute;left:50%;top:50%;z-index:1;margin-left:-32px;margin-top:-32px}.lds-ellipsis div{position:absolute;top:27px;width:11px;height:11px;border-radius:50%;background:#fff;animation-timing-function:cubic-bezier(0,1,1,0)}.lds-ellipsis div:nth-child(1){left:6px;animation:lds-ellipsis1 .6s infinite}.lds-ellipsis div:nth-child(2){left:6px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(3){left:26px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(4){left:45px;animation:lds-ellipsis3 .6s infinite}@keyframes lds-ellipsis1{0%{transform:scale(0)}100%{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}100%{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0,0)}100%{transform:translate(19px,0)}}</style>';
         $jot('head').append(cssLoading);
 
