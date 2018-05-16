@@ -5556,7 +5556,7 @@ var JotformFeedback = $jot.createClass({
             window.wishboxInstantLoad = false;
         }
         window.JotFormFrameLoaded = function() {
-            
+            $jot('.lds-ellipsis').remove();
             if (!$this.options.isCardForm) {
                 $this.options.onFormLoaded.call($this);
                 $jot('#js-form-content iframe').css({
@@ -5570,11 +5570,6 @@ var JotformFeedback = $jot.createClass({
                     $jot('.jt-feedback').remove();
                 })
             }
-
-            var timeo;
-            timeo.setTimeout(function($jot){
-                $jot('.lds-ellipsis').remove();
-            }, 500);
         };
     },
     createWindow: function(options) {
