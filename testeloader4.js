@@ -5577,8 +5577,8 @@ var JotformFeedback = $jot.createClass({
         $jot('head').append(responsiveLightboxStyle);
 
 
-        //jeff2
-        var cssLoading = '<style type="text/css">.lds-ellipsis{display:inline-block;width:64px;height:64px;position:absolute;left:50%;top:50%;z-index:1;margin-left:-32px;margin-top:-32px}.lds-ellipsis div{position:absolute;top:27px;width:11px;height:11px;border-radius:50%;background:#fff;animation-timing-function:cubic-bezier(0,1,1,0)}.lds-ellipsis div:nth-child(1){left:6px;animation:lds-ellipsis1 .6s infinite}.lds-ellipsis div:nth-child(2){left:6px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(3){left:26px;animation:lds-ellipsis2 .6s infinite}.lds-ellipsis div:nth-child(4){left:45px;animation:lds-ellipsis3 .6s infinite}@keyframes lds-ellipsis1{0%{transform:scale(0)}100%{transform:scale(1)}}@keyframes lds-ellipsis3{0%{transform:scale(1)}100%{transform:scale(0)}}@keyframes lds-ellipsis2{0%{transform:translate(0,0)}100%{transform:translate(19px,0)}}</style>';
+        //jeff3
+        var cssLoading = '<style type="text/css">.lds-ripple{display:inline-block;width:64px;height:64px;position:absolute;left:50%;top:50%;z-index:1;margin-left:-32px;margin-top:-32px}.lds-ripple div{position:absolute;border:4px solid #000;opacity:1;border-radius:50%;animation:lds-ripple 1s cubic-bezier(0,.2,.8,1) infinite}.lds-ripple div:nth-child(2){animation-delay:-.5s}@keyframes lds-ripple{0%{top:28px;left:28px;width:0;height:0;opacity:1}100%{top:-1px;left:-1px;width:58px;height:58px;opacity:0}}.jt-content{z-index:2}</style>';
         $jot('head').append(cssLoading);
 
         var dimmer = $jot('<div class="jt-dimmer"></div>').css({
@@ -5604,7 +5604,7 @@ var JotformFeedback = $jot.createClass({
             props.width = '100%';
         }
         //jeff
-        var cont = $jot('<div class="jt-feedback u-responsive-lightbox"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>').css(props).appendTo('body');
+        var cont = $jot('<div class="jt-feedback u-responsive-lightbox"></div>').css(props).appendTo('body');
         var reCenter = function() {
             cont.css({
                 marginTop: "-" + Math.floor(cont.height() / 2) + "px",
@@ -5676,7 +5676,8 @@ var JotformFeedback = $jot.createClass({
         } else {
             close.appendTo(title);
         }
-        var win = $jot('<div class="jt-content" style="-webkit-overflow-scrolling: touch; overflow: auto"></div>').html(options.content).css({
+        //jeff
+        var win = $jot('<div class="jt-content" style="-webkit-overflow-scrolling: touch; overflow: auto"><div class="lds-ripple"><div></div><div></div></div></div>').html(options.content).css({
             background: options.background,
             position: 'relative',
             width: this.options.isCardForm ? '100%' : (parseInt(options.width, 10) + 20),

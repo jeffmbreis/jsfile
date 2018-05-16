@@ -5604,7 +5604,7 @@ var JotformFeedback = $jot.createClass({
             props.width = '100%';
         }
         //jeff
-        var cont = $jot('<div class="jt-feedback u-responsive-lightbox"><div class="lds-ripple"><div></div><div></div></div></div>').css(props).appendTo('body');
+        var cont = $jot('<div class="jt-feedback u-responsive-lightbox"></div>').css(props).appendTo('body');
         var reCenter = function() {
             cont.css({
                 marginTop: "-" + Math.floor(cont.height() / 2) + "px",
@@ -5676,7 +5676,8 @@ var JotformFeedback = $jot.createClass({
         } else {
             close.appendTo(title);
         }
-        var win = $jot('<div class="jt-content" style="-webkit-overflow-scrolling: touch; overflow: auto"></div>').html(options.content).css({
+        //jeff
+        var win = $jot('<div class="jt-content" style="-webkit-overflow-scrolling: touch; overflow: auto"><div class="lds-ripple"><div></div><div></div></div></div>').html(options.content).css({
             background: options.background,
             position: 'relative',
             width: this.options.isCardForm ? '100%' : (parseInt(options.width, 10) + 20),
